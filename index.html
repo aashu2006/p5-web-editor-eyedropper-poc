@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akshat's eyedropper POC</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+    <style>
+        body{
+            margin:0;
+            background:black;
+            color:white;
+            font-family:monospace;
+        }
+        #container{
+            display:flex;
+            height:100vh;
+        }
+        #panel{
+            width:220px;
+            padding:20px;
+            background:#000;
+            border-right:1px solid #333;
+        }
+        #canvas-holder{
+            flex:1;
+        }
+        #swatch{
+            width:40px;
+            height:40px;
+            border:1px solid #555;
+            margin-top:12px;
+            background:black;
+        }
+        #toggle-status{
+            color:#888;
+            font-size:11px;
+            margin-top:14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="panel">
+            <h3>Pixel Inspector</h3>
+            x: <span id="px">0</span><br>
+            y: <span id="py">0</span><br><br>
+            R: <span id="pr">0</span><br>
+            G: <span id="pg">0</span><br>
+            B: <span id="pb">0</span><br>
+            A: <span id="pa">0</span>
+            <div id="swatch"></div>
+            <div id="toggle-status">Press E to toggle the Eyedropper</div>
+        </div>
+        <div id="canvas-holder"></div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
